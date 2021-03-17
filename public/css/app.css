@@ -1,0 +1,588 @@
+@font-face {
+  font-family: "BreuerFont";
+  src: URL("/fonts/BreuerFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerHeadline";
+  src: URL("/fonts/BreuerHeadline.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerHeadline-Oblique";
+  src: URL("/fonts/BreuerHeadline-Oblique.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerText-Bold";
+  src: URL("/fonts/BreuerText-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerText-BoldItalic";
+  src: URL("/fonts/BreuerText-BoldItalic.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerText";
+  src: URL("/fonts/BreuerText.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BreuerText-Medium";
+  src: URL("/fonts/BreuerText-Medium.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "BreuerFont";
+  background-size: contain;
+  font-size: 13px;
+  background: #002346 url(/images/main-bg.jpg?794d18eefcbc434c09cf6ae64613b619) no-repeat center 0;
+  /* The Modal (background) */
+  /* Modal Header */
+  /* Modal Body */
+  /* Modal Content */
+  /* The Close Button */
+  /* Add Animation */
+}
+
+body .container {
+  width: 65%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+body .navbar {
+  margin: 15px auto;
+}
+
+body .navbar .navbar-inner {
+  position: relative;
+}
+
+body .navbar .navbar-inner > div {
+  display: inline-block;
+}
+
+body .navbar .navbar-inner .nav-links {
+  color: white;
+  float: right;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px #fff;
+  padding-left: 15px;
+}
+
+body .navbar .navbar-inner .nav-links > a {
+  display: inline-table;
+}
+
+body .navbar .navbar-inner .nav-links > a:hover,
+body .navbar .navbar-inner .nav-links > a:focus,
+body .navbar .navbar-inner .nav-links > a:active,
+body .navbar .navbar-inner .nav-links > a:visited {
+  color: #fff;
+}
+
+body .navbar .navbar-inner .nav-links .btn-login {
+  color: #a97a00 !important;
+  background-image: linear-gradient(#ffea00, #ffcf00);
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid #ffea00;
+  position: relative;
+  margin-left: 10px;
+  font-family: "BreuerHeadline", serif;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+body .nco {
+  position: relative;
+  text-align: center;
+  font-family: "BreuerHeadline-Oblique";
+  color: #fff;
+}
+
+body .nco img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+body .nco > .text-wrapper,
+body .nco form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+body .nco .text-wrapper {
+  top: 40%;
+  width: 46%;
+}
+
+body .nco .text-1 {
+  font-size: 25px;
+}
+
+body .nco .text-2 {
+  font-size: 48px;
+  background: -webkit-linear-gradient(#ffe900, #ffce00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body .nco .text-2 span {
+  display: block;
+  font-size: 111px;
+  line-height: 0.7;
+}
+
+body .nco .text-3 {
+  font-family: "BreuerText-Medium";
+  font-size: 15px;
+  line-height: 2;
+}
+
+body .nco form {
+  bottom: 10%;
+  font-family: "BreuerText";
+  width: 50%;
+}
+
+body .nco form input {
+  color: #777777;
+  font-size: 20px;
+  padding: 10px;
+  width: 257px;
+  border: 1px solid #000;
+}
+
+body .nco form #error-message {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  height: 4px;
+  padding-top: 3px;
+}
+
+body .nco form #error-message.valid {
+  color: green;
+}
+
+body .nco form #error-message.invalid {
+  color: red;
+}
+
+body .nco form button {
+  color: #fff;
+  font-family: "BreuerText-BoldItalic";
+  font-size: 28px;
+  background: linear-gradient(0.25turn, #241e48, #64ace0, #241e48);
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px #77bc20, 0 0 0 4px #ffcf00, 0 0 0 6px #ea4632;
+  -webkit-box-shadow: 0 0 0 2px #77bc20, 0 0 0 4px #ffcf00, 0 0 0 6px #ea4632;
+  -moz-box-shadow: 0 0 0 2px #77bc20, 0 0 0 4px #ffcf00, 0 0 0 6px #ea4632;
+  width: 270px;
+  margin-top: 15px;
+}
+
+body .nco form button:hover {
+  background: linear-gradient(0.25turn, #64ace0, #241e48, #64ace0);
+}
+
+body .instruction {
+  top: -40px;
+  position: relative;
+}
+
+body .instruction .tri-section {
+  display: inline-block;
+  width: 33%;
+}
+
+body .instruction .tri-section > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .instruction .tri-section > div:first-child {
+  width: 40%;
+}
+
+body .instruction .tri-section > div:last-child {
+  width: 58%;
+}
+
+body .instruction .tri-section .circle {
+  background: blue;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  display: table;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "BreuerHeadline";
+  font-size: 84px;
+  background-image: radial-gradient(#0098ea, #0062cd);
+  color: #006ada;
+  position: relative;
+}
+
+body .instruction .tri-section .circle .number {
+  background-color: #002346;
+  color: #006ada;
+  text-shadow: 2px 2px 3px rgba(0, 35, 70, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+body .instruction .tri-section .c-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "BreuerText-Bold";
+}
+
+body footer {
+  text-align: center;
+  font-size: 10px;
+}
+
+body footer img {
+  width: 200px;
+  max-width: 100%;
+}
+
+body footer .footer-links {
+  margin-top: 15px;
+}
+
+body footer .footer-links a,
+body footer .footer-links a:hover,
+body footer .footer-links a:active,
+body footer .footer-links a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+body .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  font-family: "BreuerText";
+  font-size: 12px;
+}
+
+body .modal-header {
+  padding: 2px 16px;
+  background-color: #00244a;
+  color: white;
+}
+
+body .modal-body {
+  padding: 2px 16px;
+}
+
+body .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+body .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+body .close:hover,
+body .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+body .rotate {
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
+  position: absolute;
+  top: -7px;
+  left: -6px;
+  width: 112px;
+  height: 112px;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spinning-circle {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 125% 125%;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 125% 125%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  body .container {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  body .modal-content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body .instruction .tri-section .circle {
+    height: 80px;
+    width: 80px;
+    font-size: 65px;
+    margin: 0 auto;
+  }
+
+  body .instruction .tri-section .circle .rotate {
+    top: -6px;
+    left: -6px;
+    width: 90px;
+    height: 90px;
+  }
+
+  body .instruction .tri-section .c-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body .nco .text-wrapper {
+    top: 41%;
+    width: 70%;
+  }
+
+  body .nco form input,
+  body .nco form button {
+    font-size: 14px;
+  }
+
+  body .instruction {
+    top: 0;
+  }
+
+  body .instruction .tri-section {
+    display: block;
+    margin: 0 auto 15px;
+    width: 70%;
+  }
+
+  body .instruction .tri-section .circle {
+    margin: 0 auto 10px;
+    height: 65px;
+    width: 65px;
+    font-size: 50px;
+  }
+
+  body .instruction .tri-section .circle .rotate {
+    top: -5px;
+    left: -5px;
+    width: 73px;
+    height: 73px;
+  }
+
+  body .instruction .tri-section .c-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  body .container .nco .text-wrapper {
+    top: 41%;
+    width: 50%;
+  }
+
+  body .container .nco .text-wrapper .text-1 {
+    font-size: 20px;
+  }
+
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 35px;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 70px;
+  }
+
+  body .container .nco .text-wrapper .text-3 {
+    line-height: 1;
+    margin-top: 12px;
+  }
+
+  body .container .nco form input {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  body .container .nco form button {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .navbar .navbar-inner > div:first-child {
+    width: 30%;
+  }
+
+  body .navbar .navbar-inner > div:first-child img {
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  body .navbar .navbar-inner .nav-links .btn-login {
+    font-size: 14px;
+  }
+
+  body .container .nco .text-wrapper {
+    top: 42%;
+    width: 65%;
+  }
+
+  body .container .nco .text-wrapper .text-3 {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body .container .nco .text-wrapper {
+    top: 45% !important;
+    width: 65% !important;
+  }
+
+  body .container .nco .text-wrapper .text-1,
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 14px !important;
+    line-height: 1;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 24px !important;
+  }
+
+  body .container .nco .text-wrapper .text-3 {
+    font-size: 12px;
+  }
+
+  body .container .nco form {
+    bottom: 9%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body .container {
+    width: 80%;
+    max-width: 80%;
+  }
+
+  body .modal-content {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body .container {
+    width: 75%;
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body .container {
+    max-width: 834px;
+    width: 834px;
+  }
+}
+

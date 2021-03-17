@@ -1,0 +1,621 @@
+@font-face {
+    font-family: 'BreuerFont';
+    src: URL('/fonts/BreuerFont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerHeadline';
+    src: URL('/fonts/BreuerHeadline.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerHeadline-Oblique';
+    src: URL('/fonts/BreuerHeadline-Oblique.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerText-Bold';
+    src: URL('/fonts/BreuerText-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerText-BoldItalic';
+    src: URL('/fonts/BreuerText-BoldItalic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerText';
+    src: URL('/fonts/BreuerText.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BreuerText-Medium';
+    src: URL('/fonts/BreuerText-Medium.ttf') format('truetype');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "BreuerFont";
+    background-size: contain;
+    font-size: 13px;
+    background: #002346 url("../images/background/main-bg.jpg") no-repeat center 0;
+
+    .container {
+        width: 65%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .navbar {
+        margin: 15px auto;
+
+        .navbar-inner {
+            position: relative;
+
+            > div {
+                display: inline-block;
+            }
+
+            .nav-links {
+                > a {
+                    display: inline-table;
+
+                    &:hover, &:focus, &:active, &:visited {
+                        color: #fff;
+                    }
+                }
+
+                color: white;
+                float: right;
+                border-radius: 3px;
+                -webkit-box-shadow: inset 0 0 0 1px #fff;
+                -moz-box-shadow: inset 0 0 0 1px #fff;
+                box-shadow: inset 0 0 0 1px #fff;
+                padding-left: 15px;
+
+                .btn-login {
+                    color: #a97a00 !important;
+                    background-image: linear-gradient(#ffea00, #ffcf00);
+                    text-decoration: none;
+                    padding: 5px;
+                    border: 1px solid #ffea00;
+                    position: relative;
+                    margin-left: 10px;
+                    font-family: 'BreuerHeadline', serif;
+                    text-transform: uppercase;
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+
+    .nco {
+        position: relative;
+        text-align: center;
+        font-family: 'BreuerHeadline-Oblique';
+        color: #fff;
+
+        img {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+        }
+
+        > .text-wrapper, form {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        .text-wrapper {
+            top: 40%;
+            width: 46%;
+        }
+
+        .text-1 {
+            font-size: 25px;
+            //top: 40%;
+        }
+
+        .text-2 {
+            //top: 43%;
+            font-size: 48px;
+            background: -webkit-linear-gradient(#ffe900, #ffce00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            span {
+                display: block;
+                font-size: 111px;
+                line-height: 0.7;
+            }
+        }
+
+        .text-3 {
+            font-family: 'BreuerText-Medium';
+            font-size: 15px;
+            line-height: 2;
+            //top: 70%;
+        }
+
+        form {
+            bottom: 10%;
+            font-family: 'BreuerText';
+            width: 50%;
+
+            input {
+                color: #777777;
+                font-size: 20px;
+                padding: 10px;
+                width: 257px;
+                border: 1px solid #000;
+            }
+
+            #error-message{
+                display: block;
+                font-size: 11px;
+                font-weight: bold;
+                height: 4px;
+                padding-top: 3px;
+                &.valid {
+                    color: green;
+                }
+
+                &.invalid {
+                    color: red;
+                }
+            }
+
+            button {
+                color: #fff;
+                font-family: 'BreuerText-BoldItalic';
+                font-size: 28px;
+                background: linear-gradient(0.25turn, #241e48, #64ace0, #241e48);
+                //background: radial-gradient(#64ace0, #241e48);
+                text-transform: uppercase;
+                border-radius: 5px;
+                box-shadow: 0 0 0 2px #77bc20,
+                0 0 0 4px #ffcf00,
+                0 0 0 6px #ea4632;
+                -webkit-box-shadow: 0 0 0 2px #77bc20,
+                0 0 0 4px #ffcf00,
+                0 0 0 6px #ea4632;
+                -moz-box-shadow: 0 0 0 2px #77bc20,
+                0 0 0 4px #ffcf00,
+                0 0 0 6px #ea4632;
+                width: 270px;
+                margin-top: 15px;
+
+                &:hover {
+                    background: linear-gradient(0.25turn, #64ace0, #241e48, #64ace0);
+                }
+            }
+        }
+    }
+
+    .instruction {
+        top: -40px;
+        position: relative;
+
+        .tri-section {
+            display: inline-block;
+            width: 33%;
+
+            > div {
+                display: inline-block;
+                vertical-align: middle;
+
+                &:first-child {
+                    width: 40%;
+                }
+
+                &:last-child {
+                    width: 58%;
+                }
+            }
+
+            .circle {
+                background: blue;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                display: table;
+                vertical-align: middle;
+                text-align: center;
+                font-family: "BreuerHeadline";
+                font-size: 84px;
+                background-image: radial-gradient(#0098ea, #0062cd);
+                color: #006ada;
+                position: relative;
+                .number {
+                    background-color: #002346;
+                    color: #006ada;
+                    text-shadow: 2px 2px 3px rgba(0, 35, 70, 0.5);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                }
+            }
+
+            .c-text {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 22px;
+                font-family: "BreuerText-Bold";
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+        font-size: 10px;
+
+        img {
+            width: 200px;
+            max-width: 100%;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+
+            a, a:hover, a:active, a:visited {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        font-family: "BreuerText";
+        font-size: 12px;
+    }
+
+    /* Modal Header */
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #00244a;
+        color: white;
+    }
+
+    /* Modal Body */
+    .modal-body {
+        padding: 2px 16px;
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 40%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Add Animation */
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    .rotate {
+        animation: rotation 8s infinite linear;
+        position: absolute;
+        top: -7px;
+        left: -6px;
+        width: 112px;
+        height: 112px;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+
+    @-webkit-keyframes spinning-circle {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transform-origin: 125% 125%;
+            transform-origin: 125% 125%;
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transform-origin: 125% 125%;
+            transform-origin: 125% 125%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        .container {
+            width: 90%;
+            max-width: 90%;
+        }
+
+        .modal-content {
+            width: 90%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    //body {
+    //    .instruction {
+    //        .tri-section {
+    //            .circle {
+    //                height: 40px;
+    //                width: 40px;
+    //                font-size: 35px;
+    //                padding: 5px;
+    //            }
+    //
+    //            .c-text {
+    //                font-size: 14px;
+    //            }
+    //        }
+    //    }
+    //
+    //    .nco {
+    //        .text-wrapper {
+    //            width: 350px;
+    //        }
+    //    }
+    //}
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        .instruction {
+            .tri-section {
+                .circle {
+                    height: 80px;
+                    width: 80px;
+                    font-size: 65px;
+                    margin: 0 auto;
+
+                    .rotate {
+                        top: -6px;
+                        left: -6px;
+                        width: 90px;
+                        height: 90px;
+                    }
+                }
+
+                .c-text {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        .nco {
+            .text-wrapper {
+                top: 41%;
+                width: 70%;
+            }
+            form {
+                input, button {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .instruction {
+            top: 0;
+
+            .tri-section {
+                display: block;
+                margin: 0 auto 15px;
+                width: 70%;
+
+                .circle {
+                    margin: 0 auto 10px;
+                    height: 65px;
+                    width: 65px;
+                    font-size: 50px;
+                    .rotate {
+                        top: -5px;
+                        left: -5px;
+                        width: 73px;
+                        height: 73px;
+                    }
+                }
+
+                .c-text {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    body {
+        .container {
+            .nco {
+                .text-wrapper {
+                    top: 41%;
+                    width: 50%;
+
+                    .text-1 {
+                        font-size: 20px;
+                    }
+
+                    .text-2 {
+                        font-size: 35px;
+
+                        span {
+                            font-size: 70px;
+                        }
+                    }
+                    .text-3{
+                        line-height: 1;
+                        margin-top: 12px;
+                    }
+                }
+
+                form {
+                    input {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                    button {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        .navbar{
+            .navbar-inner{
+                > div:first-child{
+                    width: 30%;
+                    img{
+                        max-width: 100%;
+                        margin-top: 8px;
+                    }
+                }
+                .nav-links{
+                    .btn-login{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .container {
+            .nco {
+                .text-wrapper {
+                    top: 42%;
+                    width: 65%;
+
+                    .text-3{
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        .container {
+            .nco {
+                .text-wrapper {
+                    top: 45% !important;
+                    width: 65% !important;
+
+                    .text-1, .text-2 {
+                        font-size: 14px !important;
+                        line-height: 1;
+                    }
+
+                    .text-2{
+                        span{
+                            font-size: 24px !important;
+                        }
+                    }
+
+                    .text-3{
+                        font-size: 12px;
+                    }
+                }
+
+                form {
+                    bottom: 9%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        .container {
+            width: 80%;
+            max-width: 80%;
+        }
+
+        .modal-content {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        .container {
+            width: 75%;
+            max-width: 75%;
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        .container {
+            max-width: 834px;
+            width: 834px;
+        }
+    }
+}
