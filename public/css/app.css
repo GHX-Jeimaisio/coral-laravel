@@ -51,6 +51,7 @@ body {
   /* Modal Body */
   /* Modal Content */
   /* The Close Button */
+  /*Slider for about us*/
   /* Add Animation */
 }
 
@@ -271,6 +272,7 @@ body footer img {
 
 body footer .footer-links {
   margin-top: 15px;
+  color: #fff;
 }
 
 body footer .footer-links a,
@@ -318,6 +320,11 @@ body .modal-header h2 {
 
 body .modal-body {
   padding: 2px 16px;
+  text-align: justify;
+}
+
+body .modal-body .listed-item {
+  padding: 0 0 0 15px;
 }
 
 body .modal-content {
@@ -346,6 +353,86 @@ body .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+body .slider {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #002346;
+  color: #FFF;
+  transition: all 1s;
+  padding: 15px 0;
+  overflow: scroll;
+}
+
+body .slider .btn-close,
+body .slider .btn-close:hover,
+body .slider .btn-close:focus {
+  background: none;
+  color: #fff;
+  margin: 0 auto;
+  display: table;
+  border: 0;
+  padding: 15px 0;
+  font-size: 18px;
+  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
+}
+
+body .slider .btn-close::before,
+body .slider .btn-close:hover::before,
+body .slider .btn-close:focus::before {
+  content: "";
+  background: url("/images/Arrow.png") no-repeat;
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  right: -19px;
+  top: 19px;
+  transform: rotate(-90deg);
+}
+
+body .slider .about-wrapper {
+  width: 70%;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 2%;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+body .slider .about-wrapper hr {
+  height: 1px;
+  background: #fff;
+  margin-bottom: 10%;
+}
+
+body .slider.close {
+  top: 100%;
+  height: 0;
+  width: 100%;
+}
+
+body .trigger {
+  position: relative;
+}
+
+body .trigger::before {
+  content: "";
+  background: url("/images/Arrow.png") no-repeat;
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  left: -12px;
+  top: 2px;
 }
 
 @-webkit-keyframes animatetop {
@@ -552,8 +639,8 @@ body .rotate {
 
 @media screen and (max-width: 450px) {
   body .container .nco .text-wrapper {
-    top: 41% !important;
-    width: 65% !important;
+    top: 41%;
+    width: 65%;
   }
 
   body .container .nco form {
@@ -582,11 +669,39 @@ body .rotate {
 
 @media screen and (max-width: 380px) {
   body .container .nco .text-wrapper .text-2 {
+    font-size: 20px;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  body .container .nco .text-wrapper .text-2 {
+    font-size: 18px;
+  }
+
+  body .container .nco .text-wrapper .text-2 span {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  body .container .nco .text-wrapper {
+    top: 42%;
+  }
+
+  body .container .nco .text-wrapper .text-2 {
     font-size: 16px;
   }
 
   body .container .nco .text-wrapper .text-2 span {
     font-size: 25px;
+  }
+
+  body .container .nco form #error-message {
+    font-size: 10px;
   }
 }
 

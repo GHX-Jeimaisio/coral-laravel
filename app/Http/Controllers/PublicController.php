@@ -23,10 +23,21 @@ class PublicController extends Controller
         } else {
             $message = 'Email validated';
         }
-        $log = new Log();
-        $log->email = $request->email;
-        $log->status = $status;
-        $log->save();
+
+        /*Create or update CSV File*/
+        $path = storage_path('app/public/');
+
+        $fileName = 'logs.csv';
+
+        $file = fopen($path.$fileName, 'a');
+
+        $data = [
+            now(),$request->email,$status > 0 ? 'false' : 'true'
+        ];
+
+        fputcsv($file, $data);
+
+        fclose($file);
 
         return response()->json(['error'=>$status, 'message' => $message]);
 

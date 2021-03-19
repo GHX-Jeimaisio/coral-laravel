@@ -31,6 +31,11 @@
     @include('includes.about-coral')
     @include('includes.terms-and-condition')
 </div>
+<script type="text/javascript">
 
+    $('.trigger, .btn-close').on('click', function() {
+        $('.slider').toggleClass('close');
+    });
+</script>
 </body>
 </html>
